@@ -1,0 +1,13 @@
+body {
+  margin: 5rem;
+}
+
+.span-left {
+background-color: thistle;
+}
+.span-operator {
+background-color: yellow;
+}
+.span-right {
+background-color: pink;
+}

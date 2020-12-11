@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>JS Calculator</h1>
+  <div>
+    <button onclick="handleClick(1)">1</button>
+    <button onclick="handleClick(2)">2</button>
+    <button onclick="handleClick(3)">3</button>
+  </div>
+  <div>
+    <button onclick="handleClick(4)">4</button>
+    <button onclick="handleClick(5)">5</button>
+    <button onclick="handleClick(6)">6</button>
+  </div>
+  <div>
+    <button onclick="handleClick(7)">7</button>
+    <button onclick="handleClick(8)">8</button>
+    <button onclick="handleClick(9)">9</button>
+  </div>
+
+  <div> Your entry is:
+    <span class="span-left" id="leftside"></span>
+    <span class="span-operator" id="operator"></span>
+    <span class="span-right" id="rightside"></span>
+    <span id="answer"></span>
+  </div>
+  <button onclick="chooseOperator('+')">+</button>
+  <button onclick="chooseOperator('-')">-</button>
+  <button onclick="chooseOperator('*')">*</button>
+
+  <div>
+    <button onclick="evaluateAnswer()">=</button>
+  </div>
+
+  <div> Your answer is:
+    <span id="answer"></span>
+  </div>
+  <script src="action.js"></script>
+</body>
+
+</html>
