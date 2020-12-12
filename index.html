@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Calculator</title>
 </head>
 
 <body>
@@ -24,17 +24,19 @@
     <button onclick="handleClick(7)">7</button>
     <button onclick="handleClick(8)">8</button>
     <button onclick="handleClick(9)">9</button>
+    <button onclick="handleClick(0)">0</button>
+    <button onclick="handleClick('.')">.</button>
   </div>
 
   <div> Your entry is:
     <span class="span-left" id="leftside"></span>
     <span class="span-operator" id="operator"></span>
     <span class="span-right" id="rightside"></span>
-    <span id="answer"></span>
   </div>
   <button onclick="chooseOperator('+')">+</button>
   <button onclick="chooseOperator('-')">-</button>
   <button onclick="chooseOperator('*')">*</button>
+  <button onclick="chooseOperator('/')">/</button>
 
   <div>
     <button onclick="evaluateAnswer()">=</button>

@@ -1,14 +1,20 @@
 let leftSide = '';
 let rightSide = '';
 let operator = '';
+let equalHasBeenPressed = false;
+
+let leftsideSpan = document.getElementById('leftside');
+let rightsideSpan = document.getElementById('rightside');
+let operatorSpan = document.getElementById('operator');
+let answerSpan = document.getElementById('answer');
 
 handleClick = (num) => {
 	if (operator === '') {
 		leftSide += num;
-		document.getElementById('leftside').innerHTML = leftSide;
+		leftsideSpan.innerHTML = leftSide;
 	} else {
 		rightSide += num;
-		document.getElementById('rightside').innerHTML = rightSide;
+		rightsideSpan.innerHTML = rightSide;
 	}
 };
 
@@ -21,13 +27,33 @@ evaluateAnswer = () => {
 	let answer = '';
 	switch (operator) {
 		case '+':
-			leftSide + rightSide;
+			answer = parseInt(leftSide) + parseInt(rightSide);
 			break;
 		case '-':
+			answer = parseInt(leftSide) - parseInt(rightSide);
 			break;
 		case '*':
+			answer = parseInt(leftSide) * parseInt(rightSide);
+		case '/':
+			answer = parseInt(leftSide) / parseInt(rightSide);
 			break;
 	}
 
+	console.log("answer: ", answer)
+
 	document.getElementById('answer').innerHTML = answer;
+
+	if (answer === Infinity) {
+	answerSnap.innerHTML = "errOr"
+	} else {
+		answerSpan.innerHTML = answer
+}
+
+	leftsideSpan.innerHTML = '';
+	rightsideSpan.innerHTML = '';
+	operatorSpan.innerHTML = '';
+
+	operator = '';
+	leftSide = '';
+	rightSide = '';
 };
